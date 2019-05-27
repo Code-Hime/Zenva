@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Responsive Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="divwrapper">
+            <h2>My Form</h2>
+            <form id="formwrapper">
+                <section id="left-column">
+                    <fieldset>
+                        <legend>Block One</legend>
+                        <p>
+                            <input id="firstname" name="firstname" type="text" placeholder="First Name" autofocus required>
+                            <input id="lastname" name="lastname" type="text" placeholder="Last Name" required>
+                            <input id="email" name="email" type="email" placeholder="email@somewhere.com" required>
+                            <input id="url" name="url" type="url" placeholder="URL">
+                        </p>
+                        <p>
+                            <label for="username">Username:</label>
+                            <input id="username" name="username" type="text">
+
+                            <label for="password">Password:</label>
+                            <input id="password" name="password" type="password">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Block Two</legend>
+                        <p>
+                            <input id="address1" name="address1" type="text" placeholder="Address 1">
+                            <input id="address2" name="address2" type="text" placeholder="Address 2">
+                            <input id="city" name="city" type="text" placeholder="City">
+                            <input id="zip" name="zip" type="number" placeholder="Zipcode">
+                        </p>
+                        <p>
+                            <select>
+                                <optgroup label="USA">
+                                    <option>Chicago</option>
+                                    <option>New York</option>
+                                    <option>Dallas</option>
+                                    <option>Los Angeles</option>
+                                </optgroup>
+                                <optgroup label="Australia">
+                                    <option>Brisbane</option>
+                                    <option>Sydney</option>
+                                    <option>Melbourne</option>
+                                </optgroup>
+                            </select>
+                            <select name="state" id="state">
+                                <option value="" selected="selected">Select a State</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                </section>
+                <section id="right-column">
+                    <fieldset>
+                        <legend>Block Three</legend>
+                        <p>
+                        <span><input type="radio" name="color" value="red" checked>Red</span>
+                        <span><input type="radio" name="color" value="green">Green</span>
+                        <span><input type="radio" name="color" value="blue">Blue</span>
+                        <span><input type="radio" name="color" value="cyan">Cyan</span>
+                        <span><input type="radio" name="color" value="magenta">Magenta</span>
+                        <span><input type="radio" name="color" value="yellow">Yellow</span>
+                    </p>
+                    <p>
+                        <span><input type="checkbox" name="fruit" value="apple"> Apple</span>
+                        <span><input type="checkbox" name="fruit" value="orange"> Orange</span>
+                        <span><input type="checkbox" name="fruit" value="peach"> Peach</span>
+                        <span><input type="checkbox" name="fruit" value="pear"> Pear</span>
+                        <span><input type="checkbox" name="fruit" value="plum"> Plum</span>
+                    </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Block Four</legend>
+                        <textarea rows="4" cols="40" placeholder="What did you do today?"></textarea>
+                        <p><input type="submit" value="Submit"></p>
+                    </fieldset>
+
+                </section>
+
+            </form>
+        </div>
+        <footer><img style="width: 100px;" src="images/logo.png" alt="Logo coming soon"></footer>
+    </body>
+</html>

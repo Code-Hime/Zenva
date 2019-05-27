@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazing Places</title>
+    <link rel="shortcut icon" type="image/ico" href="">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <style>
+        header {
+            background-color: rgba(0,0,0,.7);
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            padding: 35px 100px 20px;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #fff;
+            opacity: .6;
+            cursor: pointer;
+        }
+
+        header a:hover {
+            opacity: 1;
+        }
+
+        header nav ul {
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        header nav li {
+            margin: 0 6px;
+        }
+
+        header nav li:first-child {
+            margin-left: 0;
+        }
+
+        header nav li:last-child {
+            margin-right: 0;
+        }
+
+        @media(max-width: 1000px) {
+            header {
+                text-align: center;
+                flex-direction: column;
+                padding: 20px 50px;
+            }
+
+            header img {
+                width: 75%;
+            }
+
+            header nav {
+                justify-content: space-around;
+            }
+
+            header h2 {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+    <!-- **************************************************** -->
+    <header>
+        <h2><a href="#" targt="_blank"><img src="img/logo.jpg"></a></h2>
+        <nav>
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#getting-around">Travel</a></li>
+                <li><a href="#famous-quotes">Quotes</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#social-media">Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="hero">
+        <div class="background-image"></div>
+        <h1>Beautiful Places Photo Portfolio</h1>
+        <h3>Breathtaking Landscapes for Your Viewing Pleasure</h3>
+        <a href="#" class="btn" target="_blank">More Stuff Here</a>
+    </div>
+    <!-- **************************************************** -->
+    <div id="about">
+        <h3 class="title">About Me</h3>
+        <div id="two-cols">
+            <div class="about-img"><img src="img/about.jpg" alt="journal"></div>
+            <div class="about-bio">
+                <p>
+                    A bunch of junk about me like how I like dogs and traveling. 
+                    Maybe something about how I also like programming and creating things!
+                </p>
+            </div>
+
+            <p>&nbsp;</p>
+
+        </div>
+        <hr>
+    </div>
+    <!-- **************************************************** -->
+    <div id="gallery" class="photo-gallery">
+        <h3 class="title">Gallery</h3>
+        <p>These images are curtousy of Unsplash, a website for photographers and designers to share their work</p>
+        <hr>
+        <ul class="grid">
+            <li class="small" style="background-image: url('img/portrait-snow-mountain.jpg');"></li>
+            <li class="large" style="background-image: url('img/landscape-sunset.jpg');"></li>
+            <li class="small" style="background-image: url('img/portrait-waterfall.jpg');"></li>
+            <li class="large" style="background-image: url('img/landscape-mountain-lake.jpg');"></li>
+        </ul>
+    </div>
+    <hr>
+    <!-- **************************************************** -->
+    <div id="getting-around">
+        <h3 class="title">Ways of Traveling</h3>
+        <p>There are many ways you can travel from backpacking to trains and planes! 
+            Don't stick to the beaten path; explore!
+        </p>
+        <ul class="grid">
+            <li><i class="fas fa-plane ico"></i><h4>Airplanes</h4><p>A powered flying vehicle with fixed wings and
+                a weight greater than that of the air it displaces.
+            </p></li>
+            <li><i class="fas fa-ship ico"></i><h4>Cruise Ships</h4><p>A passanger ship used for pleasure voyages,
+                where the voyage itself and the ship's amenities are part of the experience.
+            </p></li>
+            <li><i class="fas fa-taxi ico"></i><h4>Taxis</h4><p>A motor vehicle licensed to transport passangers
+            in return for payment of fare.
+            </p></li>
+        </ul>
+    </div>
+
+    <!-- **************************************************** -->
+    <div id="famous-quotes">
+        
+        <h3 class="title">What Others Are Saying</h3>
+        <p class="portrait"><img src="" alt="none" class="portrait-photos"></p>
+        <p class="quote">&ldquo;x&rdquo;</p>
+        <p class="author">&mdash; No One Ever</p>
+    </div>
+    <!-- **************************************************** -->
+    <div id="contact">
+        <h3 class="title">My Studio Location</h3>
+        <section class="flexbox-section">
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15896.154309846095!2d-97.03983451839147!3d33.115529747252474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c33abfd6bc4e3%3A0x9afeda1dd7084c37!2sHickory+Creek+Park!5e0!3m2!1sen!2sus!4v1557180456879!5m2!1sen!2sus" 
+                width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </p>
+            <p>696 Bluebird Rd<br>
+            Dallas, TX</p>
+        </section>
+    </div>
+    <!-- **************************************************** -->
+    <div id="contact-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfC8TVvSFuMkCGdsqdp41YUftlmhbxjbOTBRvyKW3tKp8lpXQ/viewform?embedded=true" 
+            width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    <!-- **************************************************** -->
+    <footer id="social-media">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-youtube-square"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+        </ul>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> It sure is fun to create websites.</p>
+        <p>&ldquo;Tell me and I forget, teach me and I may remember, involve me and I learn.&rdquo; &mdash;Benjamin Franklin
+        </p>
+    </footer>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {e.preventDefault();
+        
+        var target = this.hash;
+        var $target = $(target);
+        
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-100
+        }, 900, 'swing', function () {
+            window.location.hash = target-100;
+        });
+        });
+    });
+    </script>
+</body>
+</html>

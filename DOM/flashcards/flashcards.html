@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='container'>
+        <div class='card'>        
+            <div><img src='img/apple.png'></div>
+            <div class='card-title'>Apple</div>
+            <button class='card-button'>Show</button>
+            <div class='card-answer'>Manzana</div>
+        </div>
+        <div class='card'>        
+            <div><img src='img/dog.png'></div>
+            <div class='card-title'>Dog</div>
+            <button class='card-button'>Show</button>
+            <div class='card-answer'>Perro</div>
+        </div>
+        <div class='card'>        
+            <div><img src='img/city.png'></div>
+            <div class='card-title'>City</div>
+            <button class='card-button'>Show</button>
+            <div class='card-answer'>Ciudad</div>
+        </div>
+        <div class='card'>        
+            <div><img src='img/chair.png'></div>
+            <div class='card-title'>Chair</div>
+            <button class='card-button'>Show</button>
+            <div class='card-answer'>Silla</div>
+        </div>
+    </div>
+
+    <script>
+        //Access all cards 
+        var cards = document.getElementsByClassName('card');
+
+        for (var cardIndex in cards) {
+            var button = cards[cardIndex].querySelector('.card-button');
+            button.addEventListener('click', function(event){
+                var currentButton = event.target;
+                var currentCard = currentButton.parentNode;
+                var currentAnswer = currentCard.querySelector('.card-answer');
+
+                if (currentButton.innerHTML == 'Show') {
+                    currentAnswer.style.display = 'Block';
+                    currentButton.innerHTML = 'Hide';
+                }
+                else if (currentButton.innerHTML == 'Hide') {
+                    currentAnswer.style.display = 'None';
+                    currentButton.innerHTML = 'Show';
+                }
+            });
+        }
+
+        //How to access one card
+        /*
+        var firstButton = document.getElementsByClassName('card-button')[0];
+        var firstAnswer = document.getElementsByClassName('card-answer')[0];
+
+        firstButton.addEventListener('click', function(event){
+            if (firstButton.innerHTML == 'Show') {
+                firstAnswer.style.display = 'Block';
+                firstButton.innerHTML = 'Hide';
+            }
+            else if (firstButton.innerHTML == 'Hide') {
+                firstAnswer.style.display = 'None';
+                firstButton.innerHTML = 'Show';
+            }
+        });
+        */
+    </script>
+</body>

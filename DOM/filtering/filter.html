@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                padding: 40px;
+                background: #512458;
+                font-family: Arial;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+            }
+
+            .search-container {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            #search-bar {
+                height: 40px;
+                width: 80%;
+                font-size: 20px;
+            }
+
+            .adventures-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                margin: 40px;
+            }
+
+            .adventure {
+                width: 120px;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 10px;
+                text-align: center;
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Find Your Local Adventure</h1>
+        <div class='search-container'>
+            <input id='search-bar' type='text'></input>
+        </div>
+        <div class='adventures-container'>
+            <div class='adventure'>Moutain Bike Tour</div>
+            <div class='adventure'>Hinterlands Tour</div>
+            <div class='adventure'>Sky Diving</div>
+            <div class='adventure'>Local Food Festival</div>
+            <div class='adventure'>Sunday Markets Tour</div>
+            <div class='adventure'>Food Tasting Tour</div>
+            <div class='adventure'>Snorkeling Tour</div>
+            <div class='adventure'>Forest Experience</div>
+        </div>
+        <script>
+            var adventureList = [];
+            var adventures = document.getElementsByClassName('adventure');
+            for (var i = 0; i < adventures.length; i++){
+                var adventureName = adventures[i].innerHTML;
+                adventureList.push(adventureName);
+            }
+
+            var searchBar = document.getElementById('search-bar');
+            searchBar.addEventListener('keyup', function(event){
+                var text = searchBar.value;
+
+                for (var i = 0; i < adventures.length; i++){
+                    if (adventureList[i].indexOf(text) < 0) {
+                        adventures[i].style.display = 'None';
+                    }
+                    else {
+                        adventures[i].style.display = 'Block';
+                    }
+                }
+
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<head>
+    <style>
+        #div1 {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class='class1' id='div1'>
+        Hello
+        <div class='class1'> World!</div>
+    </div>
+    <button class='class1' id='button1'>Press Me.</button>
+    <form id='form'>
+        Name: <input type='text'>
+        <input type='submit' value='Save'>
+    </form>
+
+    <script>
+        //forms using event listener
+        var form = document.getElementById('form');
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            var textInput = form.elements[0];
+            alert(textInput.value);
+        });
+        //alert();
+    /* 
+        //add event listeners 
+        document.addEventListener('DOMContentLoaded', function(event){
+            alert('Page has been loaded');
+        });
+
+        document.getElementById('div1').addEventListener('mouseover', function(event){
+            event.target.style.backgroundColor = '#0000FF';
+        });
+
+        var button1 = document.getElementById('button1');
+        button1.addEventListener('click', 
+        function(event){
+            target = event.target;
+            alert(target.innerHTML);
+        });
+
+        //add or remove elements from the page using nodes
+        var div1 = document.getElementById('div1');
+        var newDiv = document.createElement('div');
+        newDiv.innerHTML = 'Hello there!';
+        div1.appendChild(newDiv);
+        document.body.removeChild(div1);
+
+        //class name
+        //call document and search within all children for class name 'class1'
+        var class1 = document.getElementsByClassName('class1');
+        //getting the first child with class name 'class1' (div1)
+        //and alerting all HTML in it
+        //alert(class1[0].innerHTML);
+
+        //id
+        //get the element by more specific id 
+        var button1 = document.getElementById('button1');
+        //alert(button1.innerHTML);
+
+        //tag name
+        //get all elements of one kind from a document (all-caps tag name)
+        var divs = document.getElementsByTagName('DIV');
+        //alert(divs[0].innerHTML);
+
+        //query selector
+        //can find elements in many different ways
+        var query = document.querySelector('.class1');
+
+        var all = document.querySelectorAll('.class1');
+        //alert(all[1].innerHTML);
+
+        var div1 = document.getElementById('div1');
+        var innerDivs = div1.getElementsByClassName('class1');
+
+        alert(innerDivs[0].innerHTML);
+
+        var div1 = document.getElementById('div1');
+        var div1Class = div1.getAttribute('class');
+        var div1HTML = div1.innerHTML;
+        var noValDiv1Color = div1.style.backgroundColor;
+        var div1ComputedStyle = window.getComputedStyle(div1).backgroundColor;
+
+        div1.setAttribute('class','class2');
+        div1.innerHTML = 'Goodbye';
+
+        div1.style.background = '#0000ff';
+        //overwrites entire attribute
+        div1.setAttribute('style','height: 100px; background-color: #0000ff;');
+    */
+    </script>
+</body>
