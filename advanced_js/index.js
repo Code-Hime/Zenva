@@ -1,12 +1,3 @@
-const request = require('request');
-const http = require('http');
-//const cryptocoin = require('./cryptocoin.js')
+const server = require('./Server.js');
 
-http.createServer((req, res) => {
-    res.writeHeader(200, { 'Content-Type': 'text/plain'});
-    if (coins){
-        res.end(JSON.stringify(coins));
-    } else {
-        res.end('No data');
-    }
-}).listen(8080);
+const server_object = new server.Server(8080);
